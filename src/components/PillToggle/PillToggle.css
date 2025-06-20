@@ -1,0 +1,63 @@
+.pill-toggle-slider {
+  position: relative;
+  display: flex;
+  border: 2px solid #4a90e2;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: #e6f0ff;
+  user-select: none;
+  width: max-content;
+  margin: 20px auto;
+}
+
+.pill-toggle-slider button.pill {
+  flex: 1 1 auto;
+  padding: 8px 16px;
+  min-width: 80px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+  color: #4a90e2;
+  transition: color 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+.pill-toggle-slider button.pill.active {
+  color: white;
+}
+
+.pill-toggle-slider .highlight {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  background: #4a90e2;
+  border-radius: 9999px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+  width: 120px;
+}
+
+@media (max-width: 600px) {
+  .pill-toggle-slider {
+    width: 95vw;
+    max-width: 100%;  
+    margin: 1rem auto; 
+  }
+
+  .pill-toggle-slider button.pill {
+    flex: 1 1 0;      
+    font-size: 1rem;
+    white-space: normal;
+    padding: 12px 8px;
+    word-break: break-word;
+    text-align: center;
+  }
+}
